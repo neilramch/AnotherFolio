@@ -118,5 +118,32 @@ body {
 
 .projects-container {
   width: 100vw;
-  height: 100vh;
+  background-color: rgb(85, 5, 87);
+  padding: 1vh;
+}
+
+.projects-container h3 {
+  text-align: center;
+  font-size: 45px;
+  color: black;
+}
+.my-projects .project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35rem;
+  margin: 8vw;
+}
+
+
+.my-projects .project-image {
+  height: 25vh;
+  width: 25vw;
+  background-color: red;
+}
+
+.my-projects .project-content {
+  background-color: black;
+  width: 25vw;
+  height: 20vh;
+  padding: 10px;
 }
