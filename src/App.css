@@ -7,6 +7,19 @@ body {
   width: 100vw;
 }
 
+/* Tab transitions* */
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 450ms ease-in;
+}
+
+
 /* Home Styles */
 
 .home-container {
@@ -45,7 +58,7 @@ body {
   grid-row: 2;
   max-width: 80%;
   justify-self: center;
-  transform:translate(10%, -80%);
+  transform:translate(10%, -40%);
 }
 
 .bio p {
@@ -57,14 +70,14 @@ body {
   grid-column: 2;
   grid-row: span 2;
   justify-self: end;
-  border-radius: 50%;
-  height: 70%;
+  border-radius: 0;
+  height: 80%;
   margin-right: 10vw;
 }
 
 .dev-icons {
   font-size: 70px;
-  transform: translate(40%, -150%);
+  transform: translate(48%, -220%);
 }
 
 .dev-icons i {
@@ -118,7 +131,7 @@ body {
 
 .projects-container {
   width: 100vw;
-  background-color: rgb(85, 5, 87);
+  background-color: rgb(232, 228, 228);
   padding: 1vh;
 }
 
@@ -134,7 +147,6 @@ body {
   margin: 8vw;
 }
 
-
 .my-projects .project-image {
   height: 25vh;
   width: 25vw;
@@ -142,8 +154,10 @@ body {
 }
 
 .my-projects .project-content {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   width: 25vw;
   height: 20vh;
   padding: 10px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 15px rgb(138, 115, 115);
 }

@@ -28,7 +28,7 @@ function Home() {
 
       <animated.img 
         className='my-img'
-        src="https://media.licdn.com/dms/image/C4E03AQF-HH1j0J1jSQ/profile-displayphoto-shrink_800_800/0/1649545766264?e=1695254400&v=beta&t=9fgVT3oQNskj2n4J_24JcUn-Nj1jVrynYVAZk8N8R40"
+        src='/memoji.PNG'
         alt="Your Image"
         style={style}
         onMouseEnter={() => set({ transform: 'scale(1.1)' })}

@@ -5,12 +5,12 @@ import Projects from './components/Projects'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also load CSS styles from CDN
 
-
 function App() {
 
   AOS.init();
 
   return (
+
     <>
     <Home />
     <Projects />
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

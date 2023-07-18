@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
+import{ useSpring, animated } from 'react-spring'
 
 function Projects() {
-  return (
-    <>
-        <div className='projects-container'>
+
+    const [scrollY, setScrollY] = useState(0);
+
+    function logit() {
+        setScrollY(window.pageYOffset);
+    }
+
+    useEffect(() => {
+        function watchScroll() {
+        window.addEventListener("scroll", logit);
+        }
+        watchScroll();
+        return () => {
+        window.removeEventListener("scroll", logit);
+        };
+    });
+
+    const fadeIn = useSpring({
+        to: {
+            opacity: scrollY / 100  // adjust the denominator to control the speed of fade-in
+        }
+    });
+
+
+    return (
+        <animated.div style={fadeIn}>
+            <div className='projects-container'>
 
             <h3>My Projects</h3>
 
@@ -32,11 +57,7 @@ function Projects() {
                     <p>Description</p>
                 </div>
             </div>
-
-
-
                 
-
             {/* Third project */}
             <div className='project'>
 
@@ -56,8 +77,7 @@ function Projects() {
 
         </div>
 
-
-    </>
+        </animated.div>
   )
 }
 
